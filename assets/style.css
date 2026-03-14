@@ -1,0 +1,15 @@
+.card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+toggle-dark-mode() {
+  let theme = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+}
+
+document.querySelector('#theme-toggle').addEventListener('click', toggle-dark-mode);
