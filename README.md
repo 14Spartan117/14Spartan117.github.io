@@ -1,41 +1,34 @@
-# MAJ Brandon De La Rosa
+# Brandon De La Rosa — GitHub Pages Portfolio
 
-Operations Research Graduate Student — Naval Postgraduate School
+This is a static, no-build portfolio package. It includes:
 
-## About
+- Starfall Defender with the current Vercel link
+- JRTC Wargame for Apple Vision Pro with current full-frame Simulator captures
+- Drone Delivery Simulator with its Army Vantage browser-twin link and access note
+- Global Logistics Drone Simulator as a distinct locally run application with an Apple Vision Pro spatial view
+- Retirement Hunter with the current Vercel link
+- Responsive navigation, dark/light themes, reduced-motion support, and keyboard-accessible controls
 
-MAJ Brandon De La Rosa is a U.S. Army officer and Operations Research graduate student at the Naval Postgraduate School. He is a graduate of the United States Merchant Marine Academy (B.S., Marine Engineering Systems) and was commissioned as a Military Intelligence Officer in 2014.
+Legacy project entries are not included.
 
-His prior assignments include service with 1-509 IN (ABN) at JRTC Fort Polk and the 264th Combat Sustainment Support Battalion, 3rd Expeditionary Sustainment Command. He deployed in support of Operation Spartan Shield (Nov 2017–May 2018) and Operation Inherent Resolve (Sep 2021–May 2022).
+## Preview locally
 
-From Virginia. Military brat. Married with one young child.
+From this directory:
 
-## Focus Areas
+```bash
+python3 -m http.server 4173
+```
 
-- Data analysis  
-- Data visualization  
-- Operational analysis  
-- Python  
-- Power BI  
+Then open `http://127.0.0.1:4173/`.
 
-## Projects
+## Publish on GitHub Pages
 
-### Retirement Hunt App
-Streamlit app for exploring retirement planning scenarios.
+Copy the contents of this directory to the root of the GitHub Pages repository, then publish through the repository's normal Pages workflow. No compilation step is required.
 
-- Live demo: https://retirement-hunter-app.streamlit.app/
-- Source: https://github.com/14Spartan117/retirement_hunt_app_v16
+## Media note
 
-### Dragon Flight (Flappy-Birds)
-Flappy Bird-style browser game built with vanilla HTML/CSS/JavaScript (Canvas). Includes multiple modes, skins, and upgrades.
+The JRTC gallery uses current, full-frame captures made from the running Apple Vision Pro Simulator. They preserve the complete simulated room and spatial interface rather than replacing the environment or tightly cropping the application. The local-recon source imagery is included separately and labeled as terrain data.
 
-- Live demo: https://14spartan117.github.io/Flappy-Birds/
-- Source: https://github.com/14Spartan117/Flappy-Birds
+The hero uses a current, full-frame Apple Vision Pro Simulator capture of Global Logistics Drone Simulator. No generated or replacement environment is used.
 
-## Contact
-
-- Email: 18airbornecorps@gmail.com
-
----
-
-Portfolio site: https://14spartan117.github.io/
+The visual concepts used for implementation are retained under `design/`.
