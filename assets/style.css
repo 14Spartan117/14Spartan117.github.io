@@ -685,6 +685,7 @@ button {
   display: grid;
   grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(50px, 10vw, 150px);
+  align-items: start;
 }
 
 .about-statement {
@@ -699,6 +700,41 @@ button {
 
 .about-copy p {
   margin: 0 0 24px;
+}
+
+.about-profile {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+.about-portrait {
+  margin: 0;
+}
+
+.about-portrait__frame {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-portrait figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .focus {
@@ -965,6 +1001,10 @@ button {
     max-width: 720px;
   }
 
+  .about-profile {
+    grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -977,6 +1017,14 @@ button {
 
   .container {
     width: min(calc(100% - 36px), var(--container));
+  }
+
+  .about-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    width: min(100%, 360px);
   }
 
   .site-brand {
