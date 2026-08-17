@@ -529,6 +529,10 @@ button {
   order: -1;
 }
 
+.project--reverse .project-showcase {
+  order: -1;
+}
+
 .project-info {
   position: relative;
   padding-left: 48px;
@@ -674,6 +678,75 @@ button {
 .project-media[type="button"]:hover,
 .project-media[type="button"]:focus-visible {
   border-color: var(--cyan);
+}
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(205px, 0.68fr);
+  gap: 16px;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.project-showcase .project-media {
+  height: 100%;
+}
+
+.project-showcase .media-frame {
+  aspect-ratio: auto;
+}
+
+.project-event {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 180ms ease;
+}
+
+.project-event__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--bg-deep);
+  object-fit: contain;
+  transition: transform 500ms var(--ease);
+}
+
+.project-event__caption {
+  display: grid;
+  gap: 5px;
+  padding: 14px 15px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.project-event__caption strong {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.065em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.project-event__caption span {
+  color: var(--muted-strong);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.project-event:hover,
+.project-event:focus-visible {
+  border-color: var(--cyan);
+}
+
+.project-event:hover .project-event__image,
+.project-event:focus-visible .project-event__image {
+  transform: scale(1.015);
 }
 
 .about-section {
@@ -985,7 +1058,8 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .project--reverse .project-media {
+  .project--reverse .project-media,
+  .project--reverse .project-showcase {
     order: 0;
   }
 
@@ -1118,6 +1192,20 @@ button {
 
   .project h3 {
     font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .project-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .project-showcase .media-frame {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-event {
+    width: min(100%, 390px);
+    justify-self: center;
   }
 
   .focus {
