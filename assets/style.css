@@ -587,6 +587,21 @@ button {
   line-height: 1.75;
 }
 
+.project-disclaimer {
+  max-width: 640px;
+  margin: 24px 0 0;
+  padding: 12px 0 12px 16px;
+  border-left: 2px solid var(--amber);
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.project-disclaimer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .project-link {
   margin-top: 24px;
   color: var(--cyan);
@@ -747,6 +762,318 @@ button {
 .project-event:hover .project-event__image,
 .project-event:focus-visible .project-event__image {
   transform: scale(1.015);
+}
+
+.montford-media {
+  width: 100%;
+  min-width: 0;
+  background: var(--bg-deep);
+  border: 1px solid var(--line-strong);
+}
+
+html:not(.js) .montford-tabs,
+html:not(.js) .montford-panel {
+  display: none;
+}
+
+.montford-media [hidden] {
+  display: none !important;
+}
+
+.montford-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.montford-tab {
+  position: relative;
+  min-height: 54px;
+  padding: 12px 18px;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.montford-tab + .montford-tab {
+  border-left: 1px solid var(--line);
+}
+
+.montford-tab::after {
+  position: absolute;
+  right: 18px;
+  bottom: -1px;
+  left: 18px;
+  height: 2px;
+  background: var(--cyan);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.montford-tab[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.montford-tab[aria-selected="true"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.montford-panel {
+  min-width: 0;
+  padding: 18px;
+}
+
+.montford-stage {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #00101a;
+  border: 1px solid var(--line);
+}
+
+.montford-film-stage video,
+.montford-model-poster,
+.montford-model-host,
+.montford-model-host model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.montford-film-stage video,
+.montford-model-poster {
+  display: block;
+  background: #00101a;
+  object-fit: contain;
+}
+
+.montford-model-poster {
+  transition: opacity 220ms ease;
+}
+
+.montford-model-host {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.montford-model-host model-viewer {
+  display: block;
+  background: transparent;
+  touch-action: pan-y;
+}
+
+.montford-model-host model-viewer:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -4px;
+}
+
+.montford-model-stage.has-model .montford-model-host {
+  pointer-events: auto;
+}
+
+.montford-model-stage.has-model .montford-model-poster {
+  opacity: 0;
+}
+
+.montford-model-stage.is-loading .montford-model-poster {
+  opacity: 0.45;
+}
+
+.montford-load {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  min-width: min(82%, 280px);
+  min-height: 58px;
+  padding: 12px 22px;
+  background: rgba(2, 11, 20, 0.92);
+  border: 1px solid var(--cyan);
+  color: #f3f2ed;
+  cursor: pointer;
+  place-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.montford-load span {
+  font-family: var(--display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.montford-load small {
+  margin-top: 3px;
+  color: #c7cfd4;
+  font-size: 0.72rem;
+}
+
+.montford-load:hover,
+.montford-load:focus-visible {
+  background: var(--cyan);
+  color: #03101d;
+}
+
+.montford-load:hover small,
+.montford-load:focus-visible small {
+  color: #03101d;
+}
+
+.montford-summary {
+  margin: 16px 0 0;
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.montford-summary strong {
+  color: var(--text);
+}
+
+.montford-status {
+  min-height: 1.4em;
+  margin: 12px 0 0;
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: 0.78rem;
+  letter-spacing: 0.045em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.montford-model-actions,
+.montford-animation,
+.montford-animation__buttons,
+.montford-fallback > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.montford-model-actions,
+.montford-animation {
+  margin-top: 14px;
+}
+
+.montford-control {
+  min-height: 44px;
+  padding: 9px 14px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.montford-control:hover,
+.montford-control:focus-visible {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.montford-control--accent {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.montford-control:disabled,
+.montford-load:disabled,
+.montford-control[aria-disabled="true"],
+.montford-load[aria-disabled="true"] {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.montford-animation {
+  display: grid;
+  grid-template-columns: auto minmax(160px, 1fr) auto;
+}
+
+.montford-timeline {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.montford-timeline input {
+  width: 100%;
+  min-height: 28px;
+  accent-color: var(--cyan);
+  cursor: pointer;
+}
+
+.montford-time {
+  color: var(--muted-strong);
+  font-family: var(--display);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+}
+
+.montford-fallback {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--amber);
+  color: var(--muted-strong);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.montford-fallback p {
+  margin: 0 0 10px;
+}
+
+.montford-fallback a {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.montford-fallback--noscript {
+  display: block;
+}
+
+.montford-noscript {
+  margin: 0;
+  padding: 18px;
+}
+
+.montford-noscript img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #00101a;
+  border: 1px solid var(--line);
+  object-fit: contain;
 }
 
 .about-section {
@@ -1067,6 +1394,10 @@ button {
     max-width: 760px;
   }
 
+  .montford-media {
+    max-width: 900px;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1208,6 +1539,27 @@ button {
     justify-self: center;
   }
 
+  .montford-panel {
+    padding: 12px;
+  }
+
+  .montford-noscript {
+    padding: 12px;
+  }
+
+  .montford-animation {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .montford-animation__buttons .montford-control {
+    flex: 1 1 110px;
+  }
+
+  .montford-time {
+    justify-self: end;
+  }
+
   .focus {
     grid-template-columns: 1fr;
   }
@@ -1250,6 +1602,24 @@ button {
 
   .project-meta li + li::before {
     display: none;
+  }
+
+  .montford-tab {
+    min-height: 50px;
+    padding-inline: 10px;
+    font-size: 0.86rem;
+  }
+
+  .montford-model-actions,
+  .montford-animation__buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .montford-model-actions .montford-control,
+  .montford-animation__buttons .montford-control {
+    flex: 0 0 auto;
+    width: 100%;
   }
 
 }

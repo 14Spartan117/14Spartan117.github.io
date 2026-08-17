@@ -27,7 +27,7 @@
         // The site remains fully usable when storage is unavailable.
       }
     </script>
-    <link rel="stylesheet" href="assets/style.css?v=20260816-glds-event" />
+    <link rel="stylesheet" href="assets/style.css?v=20260817-montford" />
     <title>Brandon De La Rosa | Operations Research &amp; Simulation</title>
   </head>
 
@@ -304,9 +304,191 @@
             </div>
           </article>
 
-          <article class="project" aria-labelledby="retirement-title" data-reveal>
+          <article class="project project--montford" aria-labelledby="montford-title" data-reveal>
             <div class="project-info">
               <div class="project-number" aria-hidden="true">05</div>
+              <h3 id="montford-title">USNS Montford Point</h3>
+              <p class="project-subtitle">Notional maritime logistics visualization</p>
+              <p class="project-description">
+                I co-built this Blender concept with AI to explore how a ballasted expeditionary transfer
+                dock could stage and release uncrewed surface craft for distributed food resupply. The
+                package pairs a public-reference ship exterior with a fictional, non-weapon loadout, a
+                repeatable 60-second deployment sequence, and an interactive web model.
+              </p>
+              <p class="project-disclaimer">
+                <strong>Notional visualization only.</strong> It is not engineering CAD, a documented ship
+                configuration, or an operational proposal.
+              </p>
+              <ul class="project-meta" aria-label="USNS Montford Point project formats and focus areas">
+                <li>Blender</li>
+                <li>60-second film</li>
+                <li>Interactive GLB</li>
+              </ul>
+            </div>
+
+            <div
+              class="montford-media"
+              data-montford-media
+              data-viewer-url="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"
+              data-static-src="assets/montford-point/montford-point-static.glb"
+              data-animated-src="assets/montford-point/montford-point-deployment.glb"
+            >
+              <div class="montford-tabs" role="tablist" aria-label="USNS Montford Point media">
+                <button
+                  id="montford-film-tab"
+                  class="montford-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="montford-film-panel"
+                  tabindex="0"
+                  data-montford-tab="film"
+                >
+                  Film
+                </button>
+                <button
+                  id="montford-model-tab"
+                  class="montford-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="montford-model-panel"
+                  tabindex="-1"
+                  data-montford-tab="model"
+                >
+                  Explore in 3D
+                </button>
+              </div>
+
+              <section
+                id="montford-film-panel"
+                class="montford-panel"
+                role="tabpanel"
+                aria-labelledby="montford-film-tab"
+                data-montford-panel="film"
+              >
+                <div class="montford-stage montford-film-stage">
+                  <video
+                    controls
+                    playsinline
+                    preload="none"
+                    inert
+                    tabindex="-1"
+                    aria-hidden="true"
+                    poster="assets/montford-point/montford-point-poster.webp"
+                    aria-label="60-second notional USNS Montford Point food-logistics deployment film"
+                    aria-describedby="montford-film-summary"
+                    data-src="assets/montford-point/montford-point-full-cycle-1080p.mp4"
+                    data-montford-video
+                  ></video>
+                  <button class="montford-load" type="button" data-montford-film-load>
+                    <span>Play 60-second film</span>
+                    <small>Loads 6.6 MB</small>
+                  </button>
+                </div>
+                <p id="montford-film-summary" class="montford-summary">
+                  <strong>Video summary:</strong> A silent, one-minute notional sequence shows the ship
+                  ballasting, staged food-logistics craft moving through four deployment waves, and the
+                  formation expanding across the water. On-screen labels identify each phase and the
+                  fictional loadout.
+                </p>
+                <p class="montford-status" role="status" aria-live="polite" data-montford-film-status>
+                  Film ready. Playback begins only when requested.
+                </p>
+                <p class="montford-fallback" data-montford-film-fallback hidden>
+                  The embedded film is unavailable.
+                  <a href="assets/montford-point/montford-point-full-cycle-1080p.mp4">Download the 60-second film (6.6 MB)</a>.
+                </p>
+              </section>
+
+              <section
+                id="montford-model-panel"
+                class="montford-panel"
+                role="tabpanel"
+                aria-labelledby="montford-model-tab"
+                data-montford-panel="model"
+                hidden
+              >
+                <div class="montford-stage montford-model-stage" data-montford-model-stage>
+                  <img
+                    class="montford-model-poster"
+                    src="assets/montford-point/montford-point-poster.webp"
+                    alt="Notional USNS Montford Point deployment scene with uncrewed food-logistics craft spreading across the water"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                  />
+                  <div class="montford-model-host" data-montford-model-host></div>
+                  <button class="montford-load" type="button" data-montford-model-load>
+                    <span>Load interactive model</span>
+                    <small>Loads 5.6 MB</small>
+                  </button>
+                </div>
+
+                <div class="montford-model-actions" data-montford-model-actions hidden>
+                  <button class="montford-control" type="button" data-montford-reset-view>
+                    Reset view
+                  </button>
+                  <button class="montford-control montford-control--accent" type="button" data-montford-animation-load>
+                    Load 13.9 MB deployment animation
+                  </button>
+                </div>
+
+                <div class="montford-animation" data-montford-animation-controls hidden>
+                  <div class="montford-animation__buttons" role="group" aria-label="Deployment animation controls">
+                    <button class="montford-control" type="button" data-montford-play>Play</button>
+                    <button class="montford-control" type="button" data-montford-pause>Pause</button>
+                    <button class="montford-control" type="button" data-montford-restart>Restart</button>
+                  </div>
+                  <label class="montford-timeline">
+                    <span>Deployment timeline</span>
+                    <input
+                      type="range"
+                      min="0"
+                      max="60"
+                      step="1"
+                      value="0"
+                      aria-valuetext="0 seconds of 60 seconds"
+                      data-montford-timeline
+                    />
+                  </label>
+                  <output class="montford-time" data-montford-time>00:00 / 01:00</output>
+                </div>
+
+                <p class="montford-status" role="status" aria-live="polite" data-montford-model-status>
+                  The interactive model loads only when requested.
+                </p>
+                <div class="montford-fallback" data-montford-fallback hidden>
+                  <p>The interactive viewer is unavailable. The poster remains visible, and the models can be downloaded directly.</p>
+                  <div>
+                    <a href="assets/montford-point/montford-point-static.glb" download>Download static model (5.6 MB)</a>
+                    <a href="assets/montford-point/montford-point-deployment.glb" download>Download animated model (13.9 MB)</a>
+                  </div>
+                </div>
+              </section>
+              <noscript>
+                <figure class="montford-noscript">
+                  <img
+                    src="assets/montford-point/montford-point-poster.webp"
+                    alt="Notional USNS Montford Point deployment scene with uncrewed food-logistics craft spreading across the water"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                  />
+                  <figcaption class="montford-fallback montford-fallback--noscript">
+                    JavaScript is required for the embedded media controls.
+                    <a href="assets/montford-point/montford-point-full-cycle-1080p.mp4">Download the 60-second film</a>
+                    or
+                    <a href="assets/montford-point/montford-point-static.glb" download>download the static 3D model</a>.
+                  </figcaption>
+                </figure>
+              </noscript>
+            </div>
+          </article>
+
+          <article class="project project--reverse" aria-labelledby="retirement-title" data-reveal>
+            <div class="project-info">
+              <div class="project-number" aria-hidden="true">06</div>
               <h3 id="retirement-title">Retirement Hunter</h3>
               <p class="project-subtitle">FIRE and retirement planning in one place</p>
               <p class="project-description">
@@ -494,6 +676,6 @@
       </div>
     </dialog>
 
-    <script src="assets/script.js" defer></script>
+    <script src="assets/script.js?v=20260817-montford" defer></script>
   </body>
 </html>
