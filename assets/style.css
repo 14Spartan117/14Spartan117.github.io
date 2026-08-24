@@ -1549,6 +1549,16 @@ html:not(.js) .montford-panel {
     width: min(calc(100% - 36px), var(--container));
   }
 
+  .about-grid > *,
+  .section-heading > * {
+    min-width: 0;
+  }
+
+  .about-statement,
+  .contact-copy h2 {
+    overflow-wrap: anywhere;
+  }
+
   .about-profile {
     grid-template-columns: 1fr;
   }
