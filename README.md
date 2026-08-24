@@ -7,6 +7,7 @@ This is a static, no-build portfolio package. It includes:
 - Drone Delivery Simulator with its Army Vantage browser-twin link and access note
 - Global Logistics Drone Simulator as a distinct locally run application with an Apple Vision Pro spatial view
 - Retirement Hunter with the current Vercel link
+- USNS Montford Point: an on-demand 60-second notional food-logistics film and interactive 3D model delivery
 - Responsive navigation, dark/light themes, reduced-motion support, and keyboard-accessible controls
 
 Legacy project entries are not included.
