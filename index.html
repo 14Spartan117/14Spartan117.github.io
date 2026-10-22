@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +7,13 @@
       name="description"
       content="I build simulation, spatial-computing, and decision-support tools for complex systems."
     />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="theme-color" content="#03101d" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <script>
@@ -27,19 +27,43 @@
         // The site remains fully usable when storage is unavailable.
       }
     </script>
-    <link rel="stylesheet" href="assets/style.css?v=20260823-faces-nps" />
+    <link rel="stylesheet" href="assets/style.css?v=20261021-profile" />
     <title>Brandon De La Rosa | Operations Research &amp; Simulation</title>
   </head>
 
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="site-brand" href="#top" aria-label="Brandon De La Rosa, home">
-          Brandon De La Rosa
-        </a>
+    <header id="top" class="profile-masthead" aria-labelledby="hero-title">
+      <div class="container profile-intro">
+        <img
+          class="profile-avatar"
+          src="assets/faces-of-nps-brandon-delarosa.webp"
+          alt="Brandon De La Rosa in his Army uniform"
+          width="1000"
+          height="1400"
+          fetchpriority="high"
+        />
+        <div class="profile-intro__copy">
+          <p class="profile-label">Operations research &amp; simulation</p>
+          <h1 id="hero-title">Brandon De La Rosa</h1>
+          <p class="profile-role">
+            U.S. Army officer · Operations research graduate student
+            <span>Naval Postgraduate School</span>
+          </p>
+          <p class="profile-purpose">
+            I combine simulation, spatial computing, and data analysis to support planning and decision-making.
+          </p>
+          <div class="profile-links">
+            <a href="https://github.com/14Spartan117" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:18airbornecorps@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
+    <div class="site-header">
+      <div class="container header-inner">
         <div class="header-actions">
           <button
             class="nav-toggle icon-button"
@@ -57,12 +81,12 @@
           </button>
 
           <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
-            <a href="#work">Work</a>
             <a href="#about">About</a>
+            <a href="#work">Selected work</a>
             <a href="#contact">Contact</a>
           </nav>
 
-          <button class="theme-toggle icon-button" type="button" aria-label="Switch to light theme">
+          <button class="theme-toggle icon-button" type="button" aria-label="Switch to dark theme">
             <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="3.5" />
               <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M19.1 4.9l-1.6 1.6M6.5 17.5l-1.6 1.6" />
@@ -73,50 +97,58 @@
           </button>
         </div>
       </div>
-    </header>
+    </div>
 
     <main id="main-content">
-      <section id="top" class="hero" aria-labelledby="hero-title">
-        <div class="container hero-grid">
-          <div class="hero-copy" data-reveal>
-            <div class="coordinates" aria-hidden="true">
-              <span>32° 42′ 17″ N</span>
-              <span>117° 9′ 49″ W</span>
-            </div>
-            <h1 id="hero-title">I build decision tools for complex systems.</h1>
-            <span class="short-rule" aria-hidden="true"></span>
-            <p>
-              I’m Brandon De La Rosa, a U.S. Army officer and operations research graduate student at the
-              Naval Postgraduate School. My work combines simulation, spatial computing, and data analysis
-              to support planning and decision-making.
-            </p>
-            <div class="hero-actions">
-              <a class="button button--primary" href="#work">
-                See my work
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg>
-              </a>
-              <a class="text-link" href="#about">
-                More about me
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg>
-              </a>
-            </div>
+      <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="about-title">About</h2>
+            <span aria-hidden="true"></span>
           </div>
 
-          <figure class="hero-media hero-media--runtime" data-reveal>
-            <div class="hero-media__frame">
-              <img
-                src="assets/glds-visionpro-global-globe.jpg"
-                alt="Global Logistics Drone Simulator running locally in Apple Vision Pro Simulator, showing a 3D logistics globe and spatial controls"
-                width="1920"
-                height="1080"
-                fetchpriority="high"
-              />
+          <div class="about-profile">
+            <div class="about-copy">
+              <p class="about-statement">I apply operations research to real operational problems.</p>
+              <p>
+                I’m a U.S. Army officer and operations research graduate student at the Naval Postgraduate
+                School. I graduated from the United States Merchant Marine Academy with a B.S. in Marine
+                Engineering Systems and commissioned as a Military Intelligence officer in 2014. My
+                assignments include 1-509 IN (ABN) at JRTC, Fort Polk, and the 264th Combat Sustainment
+                Support Battalion, 3rd Expeditionary Sustainment Command. I deployed in support of
+                Operation Spartan Shield and Operation Inherent Resolve.
+              </p>
+              <p>
+                I’m from Virginia and grew up a military brat. I’m married, and my wife and I have a son
+                named Andre.
+              </p>
             </div>
-            <figcaption>
-              <span>Apple Vision Pro Simulator · Local runtime</span>
-              <strong>Global Logistics Drone Simulator</strong>
-            </figcaption>
-          </figure>
+            <figure class="about-portrait">
+              <div class="about-portrait__frame">
+                <img
+                  src="assets/couple-avatar.jpg"
+                  alt="My wife and me outdoors"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>My wife and me</figcaption>
+            </figure>
+          </div>
+
+          <div class="focus" data-reveal>
+            <h3>Focus</h3>
+            <ul class="focus-list">
+              <li>Simulation</li>
+              <li>Data analysis</li>
+              <li>Data visualization</li>
+              <li>Operational analysis</li>
+              <li>Python</li>
+              <li>Power BI</li>
+              <li>Spatial computing</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -272,6 +304,19 @@
             </div>
 
             <div class="project-showcase">
+              <figure class="project-globe">
+                <div class="project-media media-frame media-frame--contain">
+                  <img
+                    src="assets/glds-visionpro-global-globe.jpg"
+                    alt="Global Logistics Drone Simulator running locally in Apple Vision Pro Simulator, showing a 3D logistics globe and spatial controls"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>Apple Vision Pro Simulator · Local runtime</figcaption>
+              </figure>
+
               <figure class="project-media media-frame media-frame--contain">
                 <img
                   src="assets/drone-simulator.jpg"
@@ -576,63 +621,6 @@
         </div>
       </section>
 
-      <section id="about" class="section about-section" aria-labelledby="about-title">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <h2 id="about-title">About</h2>
-            <span aria-hidden="true"></span>
-          </div>
-
-          <div class="about-grid" data-reveal>
-            <div>
-              <p class="about-statement">I apply operations research to real operational problems.</p>
-              <span class="short-rule short-rule--cyan" aria-hidden="true"></span>
-            </div>
-            <div class="about-profile">
-              <figure class="about-portrait">
-                <div class="about-portrait__frame">
-                  <img
-                    src="assets/couple-avatar.jpg"
-                    alt="My wife and me outdoors"
-                    width="1200"
-                    height="1600"
-                    loading="lazy"
-                  />
-                </div>
-                <figcaption>My wife and me</figcaption>
-              </figure>
-              <div class="about-copy">
-                <p>
-                  I’m a U.S. Army officer and operations research graduate student at the Naval Postgraduate
-                  School. I graduated from the United States Merchant Marine Academy with a B.S. in Marine
-                  Engineering Systems and commissioned as a Military Intelligence officer in 2014. My
-                  assignments include 1-509 IN (ABN) at JRTC, Fort Polk, and the 264th Combat Sustainment
-                  Support Battalion, 3rd Expeditionary Sustainment Command. I deployed in support of
-                  Operation Spartan Shield and Operation Inherent Resolve.
-                </p>
-                <p>
-                  I’m from Virginia and grew up a military brat. I’m married, and my wife and I have a son
-                  named Andre.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="focus" data-reveal>
-            <h3>Focus</h3>
-            <ul class="focus-list">
-              <li>Simulation</li>
-              <li>Data analysis</li>
-              <li>Data visualization</li>
-              <li>Operational analysis</li>
-              <li>Python</li>
-              <li>Power BI</li>
-              <li>Spatial computing</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" class="section contact-section" aria-labelledby="contact-title">
         <div class="container">
           <div class="section-heading" data-reveal>
@@ -721,6 +709,6 @@
       </div>
     </dialog>
 
-    <script src="assets/script.js?v=20260817-montford" defer></script>
+    <script src="assets/script.js?v=20261021-profile" defer></script>
   </body>
 </html>

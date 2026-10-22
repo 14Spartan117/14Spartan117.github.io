@@ -10,7 +10,7 @@
     root.dataset.theme = theme;
     const isLight = theme === "light";
     themeButton?.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
-    themeMeta?.setAttribute("content", isLight ? "#f4f6f5" : "#03101d");
+    themeMeta?.setAttribute("content", isLight ? "#ffffff" : "#03101d");
 
     if (persist) {
       try {
