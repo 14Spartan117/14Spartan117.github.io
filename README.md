@@ -2,6 +2,7 @@
 
 This is a static, no-build portfolio package. It includes:
 
+- A compact profile masthead and an About-first biography with an authentic portrait and family photo
 - Starfall Defender with the current Vercel link
 - JRTC Wargame for Apple Vision Pro with current full-frame Simulator captures
 - Drone Delivery Simulator with its Army Vantage browser-twin link and access note
@@ -30,6 +31,17 @@ Copy the contents of this directory to the root of the GitHub Pages repository, 
 
 The JRTC gallery uses current, full-frame captures made from the running Apple Vision Pro Simulator. They preserve the complete simulated room and spatial interface rather than replacing the environment or tightly cropping the application. The local-recon source imagery is included separately and labeled as terrain data.
 
-The hero uses a current, full-frame Apple Vision Pro Simulator capture of Global Logistics Drone Simulator. No generated or replacement environment is used.
+The profile masthead uses the existing Faces of NPS Army portrait. The full-frame Apple Vision Pro Simulator globe capture appears with the Global Logistics Drone Simulator project. No generated or replacement environment is used.
+
+The page defaults to a light reading surface, with a dark masthead and a dark/light theme control that retains a saved preference. The About, Selected work, and Contact anchors remain available, along with the JRTC gallery and on-demand Montford media.
+
+## Checks
+
+```bash
+node --test tests/*.test.mjs
+git diff --check
+```
+
+The profile layout checks cover reading order, navigation targets, saved theme initialization, preserved biography and project order, and on-demand media markup. Browser verification is still needed for responsive layout and interactive playback.
 
 The visual concepts used for implementation are retained under `design/`.
